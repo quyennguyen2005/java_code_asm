@@ -6,12 +6,14 @@ class Student implements Comparable<Student> {
     private double marks;
     private String rank;
 
-    public Student(int studentId, String name, double marks) {
-        this.studentId = studentId;
-        this.name = name;
-        this.marks = marks;
-        this.rank = assignRank();
-    }
+ private String assignRank() {
+        if (marks < 5.0) return "Fail";2
+        else if (marks < 6.5) return "Medium";
+        else if (marks < 7.5) return "Good";
+        else if (marks < 9.0) return "Very Good";
+        else if (marks < 0 || marks > 10) return "Error: Score must be between 0 and 10.";
+        else return "Excellent";
+        }
 
     private String assignRank() {
         if (marks < 5.0) return "Fail";
