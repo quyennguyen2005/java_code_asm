@@ -15,14 +15,6 @@ class Student implements Comparable<Student> {
         else return "Excellent";
         }
 
-    private String assignRank() {
-        if (marks < 5.0) return "Fail";
-        else if (marks < 6.5) return "Medium";
-        else if (marks < 7.5) return "Good";
-        else if (marks < 9.0) return "Very Good";
-        else return "Excellent";
-    }
-
     public int getStudentId() { return studentId; }
     public String getName() { return name; }
     public double getMarks() { return marks; }
