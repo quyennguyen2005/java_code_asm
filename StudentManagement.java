@@ -7,13 +7,13 @@ class Student implements Comparable<Student> {
     private String rank;
 
  private String assignRank() {
-        if (marks < 5.0) return "Fail";2
+        if (marks < 0 || marks > 10) return "Invalid";
+        else if (marks < 5.0) return "Fail";
         else if (marks < 6.5) return "Medium";
         else if (marks < 7.5) return "Good";
         else if (marks < 9.0) return "Very Good";
-        else if (marks < 0 || marks > 10) return "Error: Score must be between 0 and 10.";
         else return "Excellent";
-        }
+    }
 
     public int getStudentId() { return studentId; }
     public String getName() { return name; }
